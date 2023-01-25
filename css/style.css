@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto';
+}
+.hidden{
+display:none;
+}
+header{
+    position: fixed;
+    width:100vw;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EC362D;
+    color:#FFFFFF;
+    font-size: 37px;
+    font-weight: 700;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* ================== TELA 1 =================*/
+
+/* ================== TELA 2 =================*/
+
+/* ================== TELA 3 =================*/
+
+
+@media (max-width: 1100px){
+
+}
