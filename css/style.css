@@ -361,11 +361,9 @@ h6{
         background-color: #8c1f19;
         font-size: 18px;}
 
-        .page-3 input{
-            width: 100%;
-            color: black;
+    .page-3 input{
+        width: 100%;
             display: block;
-            border: 1px solid #D1D1D1;
             border-radius: 5px;
             padding: 10px 0 8px 23px;
     }
