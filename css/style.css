@@ -7,8 +7,6 @@ body{
     background-color: #FAFAFA;
 }
 
-
-
 header{
     position: fixed;
     width:100vw;
@@ -146,6 +144,215 @@ div.all-quizzes h1{
 }
 /* ================== TELA 2 =================*/
 
+.quiz-body-2{
+    background-color: #fafafa;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    flex-wrap: wrap;
+}
+
+.img-banner-2{
+    width: 100vw;
+    height: 227px;
+    position: absolute;
+    top: 70px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.banner-2{
+    width: 100vw;
+    height: 227px;
+    display: flex;
+    justify-content: center;
+    background-image: url("/images/Rectangle 36.jpg");
+    background-position: center center;
+    background-size: 100vw, 227px;   
+}
+
+.quiz-title-2{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 39px;
+    line-height: 46px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    z-index: 0;
+}
+
+.question-2{
+   background-color: white;
+   width: auto;
+   height: auto;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   flex-direction: column;
+   margin-top: 42px; 
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
+
+.question-title-2{
+    width: 689px;
+    height: 138px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 27px;
+    color: #FFFFFF;
+    margin-top: 28px;
+    margin-right: 36px;
+    margin-left: 36px;
+}
+
+.blue-question-2{
+    background-color: #434CA0;
+}
+
+.purple-question-2{
+    background-color: #A0438D;
+}
+
+.orange-question-2{
+    background-color: orange;
+}
+
+.black-question-2{
+    background-color: black;
+}
+
+.answers-2{
+    margin-top: 19px;
+    height: auto;
+    width: 689px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 36px;
+}
+
+.opacity-answer-2{
+    opacity: 0.3;
+}
+
+.answer-2 img{
+    width: 329px;
+    height: 175px;
+}
+
+.green-text-2{
+    color:  #009C22;
+}
+
+.red-text-2{
+    color: #FF4B4B;
+}
+
+.text-answer-2{
+    color:black;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    margin-top: 9px;
+    margin-bottom: 19px;
+}
+
+.quiz-finalization-2{
+    width: 759px;
+    height: 430px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 44px;
+    margin-bottom: 57px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.quiz-finalization-title-2{
+    width: 727px;
+    height: 99px;
+    margin-top: 18px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.img-finalization-2{
+    width: 364px;
+    height: 273px;
+}
+
+.text-img-finalization-2{
+    width: 727px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-finalization-2{
+    width: 328px;
+    height: 273px;
+    margin-right: 14px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 25px;
+    color: #484848;
+}
+
+.restart-quiz-2{
+    width: 260px;
+    height: 52px;
+    border-radius: 15px;
+    border: none;
+    background-color: #EC362D;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFF5F4;
+}
+
+.return-home-2{
+    margin-top: 16px;
+    width: 220px;
+    height: 44px;
+    border: none;
+    background-color: #fafafa;
+    margin-bottom: 35px;
+    color: #818181;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
 /* ================== TELA 3 =================*/
 .page-3{
     margin-top: 132px;
@@ -281,10 +488,6 @@ h6{
     margin-bottom: 25px;
 }
 
-.hidden{
-    display:none;
-}
-
 .loading-screen{
     width: 100vw;
     height: 100vh;
@@ -333,7 +536,66 @@ h6{
         margin-left: auto;
         margin-right: auto;
     }
-       /* ================== TELA 3 =================*/
+    /* ================== TELA 2 =================*/
+
+    .question-2{
+        width: 100vw;
+    }
+    .question-title-2{
+        width: auto;
+        height: 89px;
+        margin-top: 18px;
+        margin-left: 18px;
+        margin-right: 18px;
+        text-align: center;
+    }
+    .answers-2{
+        width: auto;
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+    .answer-2 img{
+        width: 163px;
+        height: 113px;
+    }
+    .quiz-finalization-2{
+        width: 100vw;
+        height: auto;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .quiz-finalization-title-2{
+        width: auto;
+        height: 99px;
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+    .text-img-finalization-2{
+        width: auto;
+        flex-wrap: wrap;
+        margin-left: 18px;
+        justify-content: center;
+        margin-top: 9px;
+    }
+    .text-finalization-2{
+        width: auto;
+        height: auto;
+        margin-top: 9px;
+        margin-bottom: 14px;
+    }
+    .restart-quiz-2{
+        width: 220px;
+        height: 44px;
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .return-home-2{
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    /* ================== TELA 3 =================*/
+
     body,.page-3{
         width: 100%;
     }
@@ -372,3 +634,48 @@ h6{
     }
 
 }
+
+@media (max-width: 414px){
+    .question-2{
+        margin-top: 24px;
+    }
+    .question-title-2{
+        font-size: 19px;
+        line-height: 22px;
+    }
+    .text-answer-2{
+        font-size: 13px;
+        line-height: 15px;
+    }
+    .img-banner-2{
+        height: 142px;
+    }
+    .banner-2{
+        height: 142px;
+        background-size: 100vw,142px;
+    }
+    .quiz-title-2{
+        font-size: 19px;
+        line-height: 22px;
+    }
+    .img-finalization-2{
+        width: 340px;
+        margin-left: -20px;
+    }
+    .quiz-finalization-2{
+        margin-bottom: 37px;
+    }
+    .quiz-finalization-title-2{
+        font-size: 19px;
+        line-height: 22px;
+    }
+    .text-finalization-2{
+        font-size: 17px;
+        line-height: 20px;
+    }
+}
+
+.hidden{
+    display:none;
+}
+
