@@ -363,9 +363,9 @@ h6{
 
     .page-3 input{
         width: 100%;
-            display: block;
-            border-radius: 5px;
-            padding: 10px 0 8px 23px;
+        display: block;
+        border-radius: 5px;
+        padding: 10px 0 8px 23px;
     }
 
 }
