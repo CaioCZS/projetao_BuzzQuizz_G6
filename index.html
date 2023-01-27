@@ -194,164 +194,52 @@
     - Tela 3.3: Níveis do quizz.
     - Tela 3.4: Sucesso do quizz.
         -->
-    <div class="page-3 hidden">
-        <div class="page-3-1 ">
+    <div class="page-3 ">
+        <div class="page-3-1 hidden">
             <h5> Comece pelo começo</h5>
             <div class="questions-container input-padding-24px">
-                <input type="text" placeholder="ítulo do seu quizz">
-                <input type="url"  placeholder="URL da imagem do seu quizz">
-                <input type="text" placeholder="Quantidade de perguntas do quizz">
-                <input type="text" placeholder="Quantidade de níveis do quizz">
+                <input type="text" onfocusout="check_lenght_title(this)" placeholder="Título do seu quizz" >
+                <p class="erro-warning hidden" > O valor deve possuir no mínimo 20 caracteres</p>
+                <p class="erro-warning hidden"> O valor deve possuir no máximo 65 caracteres</p>
+
+                <input type="url" onfocusout="check_url(this)" placeholder="URL da imagem do seu quizz" >
+                <p class="erro-warning hidden"> O valor informado não é uma URL válida</p>
+
+
+                <input type="text" onfocusout="check_qtd_questions(this)" placeholder="Quantidade de perguntas do quizz" >
+                <p class="erro-warning hidden"> O valor inserido não é um número válido</p>
+                <p class="erro-warning hidden"> O quizz deve ter no mínimo 3 perguntas</p>
+
+                <input type="text" onfocusout="check_qtd_niveis(this)" placeholder="Quantidade de níveis do quizz">
+                <p class="erro-warning hidden"> O valor inserido não é um número válido</p>
+                <p class="erro-warning hidden"> O quizz deve ter no mínimo 2 níveis</p>
             </div>
 
-            <button>Prosseguir pra criar perguntas</button>
+            <button onclick="check_page_1_validation()">Prosseguir pra criar perguntas</button>
         </div>
 
-   
         <div class="page-3-2 hidden ">
             <h5>Crie suas perguntas</h5>
-                <div class="questions-container">
-                    <div class="section">
-                        <h6>Pergunta 1</h6>
-                        <img class="hidden"src="images/Vectoredit.svg" alt="">
-                    </div>
-                    
-                    <div class="">
-                        <input class="input-margin-14px" type="text" placeholder="Texto da pergunta">
-                        <input type="text" placeholder="Cor de fundo da pergunta">
+            <div>
 
-                        <h6>Resposta correta</h6>
-                        <input class="input-margin-14px" type="text" placeholder="Resposta correta">
-                        <input  type="text" placeholder="URL da imagem">
-
-                        <h6>Respostas incorretas</h6>
-                        <input class="input-margin-14px" type="text" placeholder="Resposta incorreta 1">
-                        <input class="input-margin-32px" type="text" placeholder="URL da imagem 1">
-
-                        <input class="input-margin-14px" type="text" placeholder="Resposta incorreta 2">
-                        <input class="input-margin-32px" type="text" placeholder="URL da imagem 2">
-
-                        <input class="input-margin-14px" type="text" placeholder="Resposta incorreta 3">
-                        <input type="text" placeholder="URL da imagem 3">
-                    </div>
-                </div>
-
-                <div class="questions-container">
-                    <div class="section">
-                        <h6>Pergunta 2</h6>
-                        <img class=""src="images/Vectoredit.svg" alt="">
-                    </div>
-                    
-                    <div class="hidden">
-                        <input class="input-margin-14px" type="text" placeholder="Texto da pergunta">
-                        <input type="text" placeholder="Cor de fundo da pergunta">
-
-                        <h6>Resposta correta</h6>
-                        <input class="input-margin-14px" type="text" placeholder="Resposta correta">
-                        <input  type="text" placeholder="URL da imagem">
-
-                        <h6>Respostas incorretas</h6>
-                        <input class="input-margin-14px" type="text" placeholder="Resposta incorreta 1">
-                        <input class="input-margin-32px" type="text" placeholder="URL da imagem 1">
-
-                        <input class="input-margin-14px" type="text" placeholder="Resposta incorreta 2">
-                        <input class="input-margin-32px" type="text" placeholder="URL da imagem 2">
-
-                        <input class="input-margin-14px" type="text" placeholder="Resposta incorreta 3">
-                        <input type="text" placeholder="URL da imagem 3">
-                    </div>
-                </div>
-
-                <div class="questions-container">
-                    <div class="section"> 
-                        <h6>Pergunta 3</h6>
-                        <img class=""src="images/Vectoredit.svg" alt="">
-                    </div>
-                    
-                    <div class="hidden">
-                        <input class="input-margin-14px" type="text" placeholder="Texto da pergunta">
-                        <input type="text" placeholder="Cor de fundo da pergunta">
-
-                        <h6>Resposta correta</h6>
-                        <input class="input-margin-14px" type="text" placeholder="Resposta correta">
-                        <input  type="text" placeholder="URL da imagem">
-
-                        <h6>Respostas incorretas</h6>
-                        <input class="input-margin-14px" type="text" placeholder="Resposta incorreta 1">
-                        <input class="input-margin-32px" type="text" placeholder="URL da imagem 1">
-
-                        <input class="input-margin-14px" type="text" placeholder="Resposta incorreta 2">
-                        <input class="input-margin-32px" type="text" placeholder="URL da imagem 2">
-
-                        <input class="input-margin-14px" type="text" placeholder="Resposta incorreta 3">
-                        <input type="text" placeholder="URL da imagem 3">
-                    </div>
-                    <p>Acerte os personagens corretos dos Simpsons e prove seu amor!</p>
-                </div>
-
-                <button>Prosseguir pra criar níveis</button>
+            </div>
+            <button onclick="check_page_2_validation()">Prosseguir pra criar níveis</button>
 
         </div>
 
         <div class="page-3-3 hidden">
             <h5>Agora, decida os níveis</h5>
-            <div class="questions-container">
-                <div>
-                    <h6>Nível 1</h6>
-                    <img class="hidden"src="images/Vectoredit.svg" alt="">
-                </div>
-                
-                <div class="">
-                    <input type="text" placeholder="Título do nível">
-                    <input type="text" placeholder="% de acerto mínima">
-                    
-                    <input  type="text" placeholder="URL da imagem do nível">
-                    <input  type="text" placeholder="Descrição do nível">
-                </div>
-            </div>
+            <div>
+             </div>
 
-            <div class="questions-container">
-                <div>
-                    <h6>Nível 2</h6>
-                    <img class=""src="images/Vectoredit.svg" alt="">
-                </div>
-                
-                <div class="hidden">
-                    <input type="text" placeholder="Título do nível">
-                    <input type="text" placeholder="% de acerto mínima">
-                    
-                    <input  type="text" placeholder="URL da imagem do nível">
-                    <input  type="text" placeholder="Descrição do nível">
-                </div>
-            </div>
-
-            <div class="questions-container">
-                <div>
-                    <h6>Nível 3</h6>
-                    <img class=""src="images/Vectoredit.svg" alt="">
-                </div>
-                
-                <div class="hidden">
-                    <input type="text" placeholder="Título do nível">
-                    <input type="text" placeholder="% de acerto mínima">
-                    
-                    <input  type="text" placeholder="URL da imagem do nível">
-                    <input  type="text" placeholder="Descrição do nível">
-                </div>
-            </div>
-
-            <button>Finalizar Quizz</button>
-
-
+            <button onclick="check_page_3_validation()">Finalizar Quizz</button>
 
 
         </div>
 
-        <div class="page-3-3 hidden">
+        <div class="page-3-4 hidden">
             <h5>Seu quizz está pronto!</h5>
-            <div>
-
-                    
+        <div>
             <button>Acessar Quiz</button>
             <a href=""> Voltar pra home </a>
         </div>

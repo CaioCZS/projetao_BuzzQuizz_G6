@@ -391,6 +391,11 @@ h5{
     justify-content: space-between;
 }
 
+.questions-container div:last-child{
+    padding-bottom: 27px;
+
+}
+
 .page-3 input{
     width: 100%;
     color: black;
@@ -453,25 +458,32 @@ h6{
     margin-bottom: 12px;
 }
 
-.page-3-2 div h6:nth-child(3){
+.page-3-2 div h6:nth-child(5){
     margin-top: 26px;
     margin-bottom: 24px;
 }
 
-.page-3-2 div h6:nth-child(6){
+.page-3-2 div h6:nth-child(10){
     margin-top: 28px;
     margin-bottom: 14px;
 }
 
-.input-margin-14px,.page-3-3 input{
-    margin-bottom: 14px;
+.page-3-3 input{
+}
+
+.input-margin-14px{
+    margin-top: 14px;
+}
+
+.input-margin-32pxtop{
+    margin-top: 32px;
 }
 
 .input-margin-32px{
     margin-bottom: 32px;
 }
 
-.page-3-3 a{
+.page-3-4 a{
     display: block;
     color: #818181;
     font-size: 21px;
@@ -480,11 +492,11 @@ h6{
     text-decoration: none;
 }
 
-.page-3-3 a:hover{
+.page-3-4 a:hover{
     text-decoration: underline;
 }
 
-.page-3-3 button{
+.page-3-4 button, .page-3-3 button{
     margin-bottom: 25px;
 }
 
@@ -518,6 +530,21 @@ h6{
     font-size:33px;
 }
 
+.page-3-2 .erro-warning, .page-3-3 .erro-warning{
+    padding-top: 5px;
+}
+
+.erro-warning{
+    color: #EC362D;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 10px;
+}
+
+.erro-background-color{
+    background-color: #FFE9E9;
+}
 @media (max-width: 1100px){
      /* ================== TELA 1 =================*/
      .screen-1{
@@ -608,6 +635,11 @@ h6{
         width: 100vw;
         padding: 11px 20px 8px 16px;
         background-size: 100%;
+    }
+    
+    .input-padding-24px{
+        padding-bottom: 24px;
+        padding-top: 21px;
     }
 
     h5{
