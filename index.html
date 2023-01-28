@@ -22,18 +22,19 @@
         </div>
     </div>
     </div>
+<div class="hide-screen-1"> 
     <div class="screen-1">
-        <div class="your-quizzes-empty hidden">
+        <div class="your-quizzes-empty">
             <span class="msg-no-quizz">
                 Você não criou nenhum<br>
                 quizz ainda :(
             </span>
-                  <button class="btn-create-quizz">Criar Quizz</button>       
+                  <button onclick="createQuizzBtn()" class="btn-create-quizz">Criar Quizz</button>       
         </div>
-        <div class="your-quizzes">
+        <div class="your-quizzes hidden">
         <div class="txt-yourQ">
             <h1>Seus Quizzes</h1>
-            <ion-icon name="add-circle"></ion-icon>
+            <ion-icon onclick="createQuizzBtn()" name="add-circle"></ion-icon>
         </div>
             <div class="list-quizzes">
                 <div class="quizz yourQuizz">
@@ -83,8 +84,110 @@
             </div>
         </div>
     </div>
+</div>
+    <!-- TELA 2 -->
 
-
+    <div class="quiz-body-2 hidden">
+        <div class="banner-2">
+            <div class="img-banner-2"></div>
+            <div class="quiz-title-2">O quão Potterhead é você?</div>
+        </div>
+        <div class="question-2">
+            <div class="question-title-2 blue-question-2">Em qual animal Olho-Tonto Moody transfigurou Malfoy?</div>
+            <div class="answers-2">
+                <div class="answer-2">
+                    <img src="./images/image 3.jpg" alt="imagem-1">
+                    <div class="text-answer-2">Gatíneo</div>
+                </div>
+                <div class="answer-2">
+                    <img src="./images/image 3.jpg" alt="imagem-1">
+                    <div class="text-answer-2">Gatíneo</div>
+                </div>
+                <div class="answer-2">
+                    <img src="./images/image 3.jpg" alt="imagem-1">
+                    <div class="text-answer-2">Gatíneo</div>
+                </div>
+                <div class="answer-2">
+                    <img src="./images/image 3.jpg" alt="imagem-1">
+                    <div class="text-answer-2">Gatíneo</div>
+                </div>
+            </div>
+        </div>
+        <div class="question-2">
+            <div class="question-title-2 purple-question-2">Em qual animal Olho-Tonto Moody transfigurou Malfoy?</div>
+            <div class="answers-2">
+                <div class="answer-2">
+                    <img src="./images/image 3.jpg" alt="imagem-1">
+                    <div class="text-answer-2">Gatíneo</div>
+                </div>
+                <div class="answer-2">
+                    <img src="./images/image 3.jpg" alt="imagem-1">
+                    <div class="text-answer-2">Gatíneo</div>
+                </div>
+                <div class="answer-2">
+                    <img src="./images/image 3.jpg" alt="imagem-1">
+                    <div class="text-answer-2">Gatíneo</div>
+                </div>
+                <div class="answer-2">
+                    <img src="./images/image 3.jpg" alt="imagem-1">
+                    <div class="text-answer-2">Gatíneo</div>
+                </div>
+            </div>
+        </div>
+        <div class="question-2">
+            <div class="question-title-2 orange-question-2">Em qual animal Olho-Tonto Moody transfigurou Malfoy?</div>
+            <div class="answers-2">
+                <div class="answer-2">
+                    <img src="./images/image 3.jpg" alt="imagem-1">
+                    <div class="text-answer-2">Gatíneo</div>
+                </div>
+                <div class="answer-2">
+                    <img src="./images/image 3.jpg" alt="imagem-1">
+                    <div class="text-answer-2">Gatíneo</div>
+                </div>
+                <div class="answer-2">
+                    <img src="./images/image 3.jpg" alt="imagem-1">
+                    <div class="text-answer-2">Gatíneo</div>
+                </div>
+                <div class="answer-2">
+                    <img src="./images/image 3.jpg" alt="imagem-1">
+                    <div class="text-answer-2">Gatíneo</div>
+                </div>
+            </div>
+        </div>
+        <div class="question-2">
+            <div class="question-title-2 black-question-2">Em qual animal Olho-Tonto Moody transfigurou Malfoy?</div>
+            <div class="answers-2">
+                <div class="answer-2">
+                    <img src="./images/image 3.jpg" alt="imagem-1">
+                    <div class="text-answer-2">Gatíneo</div>
+                </div>
+                <div class="answer-2">
+                    <img src="./images/image 3.jpg" alt="imagem-1">
+                    <div class="text-answer-2">Gatíneo</div>
+                </div>
+                <div class="answer-2">
+                    <img src="./images/image 3.jpg" alt="imagem-1">
+                    <div class="text-answer-2">Gatíneo</div>
+                </div>
+                <div class="answer-2">
+                    <img src="/images/image 3.jpg" alt="imagem-1">
+                    <div class="text-answer-2">Gatíneo</div>
+                </div>
+            </div>
+        </div>
+        <div class="quiz-finalization-2">
+            <div class="quiz-finalization-title-2">
+                88% de acerto: Você é praticamente um aluno de Hogwarts!
+            </div>
+            <div class="text-img-finalization-2">
+                <img class='img-finalization-2' src="/images/image 10.jpg" alt="image-final">
+                <div class="text-finalization-2">Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o loop infinito de comida e clique no botão abaixo para usar o vira-tempo e reiniciar este teste.</div>
+            </div>
+        </div>
+        <button class="restart-quiz-2">Reiniciar Quizz</button>
+        <button class="return-home-2">Voltar pra home</button>
+    </div>
 
     <!-- TELA 3 
     - Tela 3.1: Informações básicas do quizz.
@@ -92,169 +195,57 @@
     - Tela 3.3: Níveis do quizz.
     - Tela 3.4: Sucesso do quizz.
         -->
-    <div class="page-3 hidden">
-        <div class="page-3-1 ">
+    <div class="page-3 ">
+        <div class="page-3-1 hidden">
             <h5> Comece pelo começo</h5>
             <div class="questions-container input-padding-24px">
-                <input type="text" placeholder="ítulo do seu quizz">
-                <input type="url"  placeholder="URL da imagem do seu quizz">
-                <input type="text" placeholder="Quantidade de perguntas do quizz">
-                <input type="text" placeholder="Quantidade de níveis do quizz">
+                <input type="text" onfocusout="check_lenght_title(this)" placeholder="Título do seu quizz" >
+                <p class="erro-warning hidden" > O valor deve possuir no mínimo 20 caracteres</p>
+                <p class="erro-warning hidden"> O valor deve possuir no máximo 65 caracteres</p>
+
+                <input type="url" onfocusout="check_url(this)" placeholder="URL da imagem do seu quizz" >
+                <p class="erro-warning hidden"> O valor informado não é uma URL válida</p>
+
+
+                <input type="text" onfocusout="check_qtd_questions(this)" placeholder="Quantidade de perguntas do quizz" >
+                <p class="erro-warning hidden"> O valor inserido não é um número válido</p>
+                <p class="erro-warning hidden"> O quizz deve ter no mínimo 3 perguntas</p>
+
+                <input type="text" onfocusout="check_qtd_niveis(this)" placeholder="Quantidade de níveis do quizz">
+                <p class="erro-warning hidden"> O valor inserido não é um número válido</p>
+                <p class="erro-warning hidden"> O quizz deve ter no mínimo 2 níveis</p>
             </div>
 
-            <button>Prosseguir pra criar perguntas</button>
+            <button onclick="check_page_1_validation()">Prosseguir pra criar perguntas</button>
         </div>
 
-   
         <div class="page-3-2 hidden ">
             <h5>Crie suas perguntas</h5>
-                <div class="questions-container">
-                    <div class="section">
-                        <h6>Pergunta 1</h6>
-                        <img class="hidden"src="images/Vectoredit.svg" alt="">
-                    </div>
-                    
-                    <div class="">
-                        <input class="input-margin-14px" type="text" placeholder="Texto da pergunta">
-                        <input type="text" placeholder="Cor de fundo da pergunta">
+            <div>
 
-                        <h6>Resposta correta</h6>
-                        <input class="input-margin-14px" type="text" placeholder="Resposta correta">
-                        <input  type="text" placeholder="URL da imagem">
-
-                        <h6>Respostas incorretas</h6>
-                        <input class="input-margin-14px" type="text" placeholder="Resposta incorreta 1">
-                        <input class="input-margin-32px" type="text" placeholder="URL da imagem 1">
-
-                        <input class="input-margin-14px" type="text" placeholder="Resposta incorreta 2">
-                        <input class="input-margin-32px" type="text" placeholder="URL da imagem 2">
-
-                        <input class="input-margin-14px" type="text" placeholder="Resposta incorreta 3">
-                        <input type="text" placeholder="URL da imagem 3">
-                    </div>
-                </div>
-
-                <div class="questions-container">
-                    <div class="section">
-                        <h6>Pergunta 2</h6>
-                        <img class=""src="images/Vectoredit.svg" alt="">
-                    </div>
-                    
-                    <div class="hidden">
-                        <input class="input-margin-14px" type="text" placeholder="Texto da pergunta">
-                        <input type="text" placeholder="Cor de fundo da pergunta">
-
-                        <h6>Resposta correta</h6>
-                        <input class="input-margin-14px" type="text" placeholder="Resposta correta">
-                        <input  type="text" placeholder="URL da imagem">
-
-                        <h6>Respostas incorretas</h6>
-                        <input class="input-margin-14px" type="text" placeholder="Resposta incorreta 1">
-                        <input class="input-margin-32px" type="text" placeholder="URL da imagem 1">
-
-                        <input class="input-margin-14px" type="text" placeholder="Resposta incorreta 2">
-                        <input class="input-margin-32px" type="text" placeholder="URL da imagem 2">
-
-                        <input class="input-margin-14px" type="text" placeholder="Resposta incorreta 3">
-                        <input type="text" placeholder="URL da imagem 3">
-                    </div>
-                </div>
-
-                <div class="questions-container">
-                    <div class="section"> 
-                        <h6>Pergunta 3</h6>
-                        <img class=""src="images/Vectoredit.svg" alt="">
-                    </div>
-                    
-                    <div class="hidden">
-                        <input class="input-margin-14px" type="text" placeholder="Texto da pergunta">
-                        <input type="text" placeholder="Cor de fundo da pergunta">
-
-                        <h6>Resposta correta</h6>
-                        <input class="input-margin-14px" type="text" placeholder="Resposta correta">
-                        <input  type="text" placeholder="URL da imagem">
-
-                        <h6>Respostas incorretas</h6>
-                        <input class="input-margin-14px" type="text" placeholder="Resposta incorreta 1">
-                        <input class="input-margin-32px" type="text" placeholder="URL da imagem 1">
-
-                        <input class="input-margin-14px" type="text" placeholder="Resposta incorreta 2">
-                        <input class="input-margin-32px" type="text" placeholder="URL da imagem 2">
-
-                        <input class="input-margin-14px" type="text" placeholder="Resposta incorreta 3">
-                        <input type="text" placeholder="URL da imagem 3">
-                    </div>
-                    <p>Acerte os personagens corretos dos Simpsons e prove seu amor!</p>
-                </div>
-
-                <button>Prosseguir pra criar níveis</button>
+            </div>
+            <button onclick="check_page_2_validation()">Prosseguir pra criar níveis</button>
 
         </div>
 
         <div class="page-3-3 hidden">
             <h5>Agora, decida os níveis</h5>
-            <div class="questions-container">
-                <div>
-                    <h6>Nível 1</h6>
-                    <img class="hidden"src="images/Vectoredit.svg" alt="">
-                </div>
-                
-                <div class="">
-                    <input type="text" placeholder="Título do nível">
-                    <input type="text" placeholder="% de acerto mínima">
-                    
-                    <input  type="text" placeholder="URL da imagem do nível">
-                    <input  type="text" placeholder="Descrição do nível">
-                </div>
-            </div>
+            <div>
+             </div>
 
-            <div class="questions-container">
-                <div>
-                    <h6>Nível 2</h6>
-                    <img class=""src="images/Vectoredit.svg" alt="">
-                </div>
-                
-                <div class="hidden">
-                    <input type="text" placeholder="Título do nível">
-                    <input type="text" placeholder="% de acerto mínima">
-                    
-                    <input  type="text" placeholder="URL da imagem do nível">
-                    <input  type="text" placeholder="Descrição do nível">
-                </div>
-            </div>
-
-            <div class="questions-container">
-                <div>
-                    <h6>Nível 3</h6>
-                    <img class=""src="images/Vectoredit.svg" alt="">
-                </div>
-                
-                <div class="hidden">
-                    <input type="text" placeholder="Título do nível">
-                    <input type="text" placeholder="% de acerto mínima">
-                    
-                    <input  type="text" placeholder="URL da imagem do nível">
-                    <input  type="text" placeholder="Descrição do nível">
-                </div>
-            </div>
-
-            <button>Finalizar Quizz</button>
-
-
+            <button onclick="check_page_3_validation()">Finalizar Quizz</button>
 
 
         </div>
 
-        <div class="page-3-3 hidden">
+        <div class="page-3-4 hidden">
             <h5>Seu quizz está pronto!</h5>
-            <div>
-
-                    
+        <div class="access-quizz">
             <button>Acessar Quiz</button>
             <a href=""> Voltar pra home </a>
         </div>
     </div>
-
+</div>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
