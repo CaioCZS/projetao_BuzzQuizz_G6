@@ -3,8 +3,21 @@ const toggleHiddenLoading = () =>{
 }
 
 /* ================== TELA 1 =================*/
-
 const yourQuizzes = [];
+
+const quizzDeleted = response =>{
+    alert('seu quizz foi apgado');
+    window.location.reload(true)
+}
+
+const errorDelete = error =>{
+    console.log(error)
+}
+
+const deleteQuizz = (id,key) =>{
+    console.log(key)
+    const promise= axios.delete(`https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/${id}`);
+}
 
 const showYourQuizzes = () =>{
     const listYourQuizzes = document.querySelector('.your-quizzes .list-quizzes');
@@ -12,15 +25,15 @@ const showYourQuizzes = () =>{
     yourQuizzes.forEach(quizz =>{
         let templateYQ = `
         <div class="fix-quizz">
-        <div onclick="alert('b')" class="quizz yourQuizz id-${quizz.id}">
+        <div onclick="searchQuiz(${quizz.id})" class="quizz yourQuizz id-${quizz.id}">
             <p>${quizz.title}</p>
         </div>
         <div class="options">
             <ion-icon name="create-outline"></ion-icon>
-            <ion-icon onclick="alert('a')" name="trash-outline"></ion-icon>
+            <ion-icon onclick="deleteQuizz(${quizz.id},'${quizz.key}')" name="trash-outline"></ion-icon>
         </div>
     </div>
-        `;//lucio adiciona a funcao de exibir o quizz aqui no "onclick="funcao${quizz.id}""
+        `;
         listYourQuizzes.innerHTML+= templateYQ;
         document.querySelector(`.id-${quizz.id}`).style.backgroundImage = `linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 65.62%, rgba(0, 0, 0, 0.8) 100%),url(${quizz.image})`
     })
@@ -54,20 +67,22 @@ const showAllQuizzes = (resposta) =>{
         `;
         listaAllQuizzes.innerHTML+=template
         document.querySelector(`.id-${quizz.id}`).style.backgroundImage = `linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 65.62%, rgba(0, 0, 0, 0.8) 100%),url(${quizz.image})`
-        console.log(document.querySelector(`.id-${quizz.id}`))
+        //console.log(document.querySelector(`.id-${quizz.id}`))
     })
 }
 const createQuizzBtn = () =>{
     document.querySelector('.hide-screen-1').classList.add('hidden');
     document.querySelector('.page-3-1').classList.remove('hidden');
     toggleHiddenLoading();
-    setTimeout(toggleHiddenLoading , 1000)
+    setTimeout(toggleHiddenLoading, 1000)
 }
 
 const showQuizzes = resposta =>{
-    document.querySelector('.screen-1').classList.remove('hidden')
-    showAllQuizzes(resposta);
-    setTimeout(toggleHiddenLoading , 1000)
+        setTimeout(()=>{
+        toggleHiddenLoading();
+        document.querySelector('.screen-1').classList.remove('hidden');
+        showAllQuizzes(resposta);
+    } , 1000)
 }
 
 const errorGetQuizzes = error =>{
@@ -982,7 +997,7 @@ function send_created_quiz(){
         })
     }
 
-    console.log(created_quizz);
+    //console.log(created_quizz);
     const sent = axios.post(`${urlQuizz}/quizzes`, created_quizz);
     sent.then(created_quizz_sucess);
     sent.catch(created_quizz_failure);
@@ -1000,7 +1015,7 @@ function created_quizz_sucess(data){
     /*document.querySelector(".page-3-3").classList.add("hidden")
     document.querySelector(".page-3-4").classList.remove("hidden");
     toggleHiddenLoading();*/
-    console.log(data.data.id);
+    //console.log(data.data.id);
     //salvando no local storage
     const quizzSerializado = JSON.stringify(data.data);
     localStorage.setItem(`${data.data.id}`,quizzSerializado);
@@ -1008,9 +1023,9 @@ function created_quizz_sucess(data){
     getKeys();
     document.querySelector('.access-quizz').innerHTML =`
         <div class="quizz"></div>
-        <button onclick="funcao(${data.data.id})">Acessar Quiz</button>
+        <button onclick="searchQuiz(${data.data.id})">Acessar Quiz</button>
         <a href=""> Voltar pra home </a>
-    `//lucio adiciona a funcao de exibir o quizz aqui no "onclick="funcao${data.data.id}""
+    `
 }
 
 function created_quizz_failure(data){
