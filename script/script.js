@@ -4,19 +4,23 @@ const toggleHiddenLoading = () =>{
 
 /* ================== TELA 1 =================*/
 const yourQuizzes = [];
-
+let idQuizz;
 const quizzDeleted = response =>{
-    alert('seu quizz foi apgado');
+    localStorage.removeItem(idQuizz);
+    alert('Seu quizz foi apagado com sucesso')
     window.location.reload(true)
 }
 
 const errorDelete = error =>{
     console.log(error)
 }
-
 const deleteQuizz = (id,key) =>{
     console.log(key)
-    const promise= axios.delete(`https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/${id}`);
+    idQuizz=id;
+    if(confirm('Deseja mesmo apagar esse quizz?')){
+        const promise= axios.delete(`https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/${id}`,{headers:{"Secret-Key": key}});
+        promise.then(quizzDeleted).catch(errorDelete);
+    }
 }
 
 const showYourQuizzes = () =>{
@@ -42,7 +46,7 @@ const showYourQuizzes = () =>{
 
 }
 
-const getKeys = () =>{
+function getKeys(){
     const keys = Object.keys(localStorage);
     console.log(keys)
     keys.forEach(key =>{
