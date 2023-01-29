@@ -286,10 +286,11 @@ function quizFinalization(){
                 <img class='img-finalization-2' src="${image}">
                 <div class="text-finalization-2">${text}</div>
                 </div>`
-        
-                finalization.classList.remove('hidden');
 
-                document.querySelector('.quiz-finalization-2').scrollIntoView();
+                setTimeout(()=>{
+                    finalization.classList.remove('hidden')
+                    document.querySelector('.quiz-finalization-2').scrollIntoView()
+                },2000);
 
                 break;
 
