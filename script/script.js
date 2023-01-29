@@ -11,13 +11,15 @@ const showYourQuizzes = () =>{
     listYourQuizzes.innerHTML = '';
     yourQuizzes.forEach(quizz =>{
         let templateYQ = `
-            <div onclick="funcao${quizz.id}" class="quizz yourQuizz id-${quizz.id}">
-                <div class="options">
-                    <ion-icon name="create-outline"></ion-icon>
-                    <ion-icon name="trash-outline"></ion-icon>
-                </div>
-                <p>${quizz.title}</p>
-            </div>
+        <div class="fix-quizz">
+        <div onclick="alert('b')" class="quizz yourQuizz id-${quizz.id}">
+            <p>${quizz.title}</p>
+        </div>
+        <div class="options">
+            <ion-icon name="create-outline"></ion-icon>
+            <ion-icon onclick="alert('a')" name="trash-outline"></ion-icon>
+        </div>
+    </div>
         `;//lucio adiciona a funcao de exibir o quizz aqui no "onclick="funcao${quizz.id}""
         listYourQuizzes.innerHTML+= templateYQ;
         document.querySelector(`.id-${quizz.id}`).style.backgroundImage = `linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 65.62%, rgba(0, 0, 0, 0.8) 100%),url(${quizz.image})`
@@ -44,8 +46,10 @@ const showAllQuizzes = (resposta) =>{
     listaAllQuizzes.innerHTML='';
     resposta.data.forEach(quizz => {
         let template = `
+        <div class="fix-quizz">
         <div class="quizz id-${quizz.id}">
             <p>${quizz.title}</p>
+        </div>
         </div>
         `;
         listaAllQuizzes.innerHTML+=template
@@ -776,6 +780,7 @@ function created_quizz_sucess(data){
 
     getKeys();
     document.querySelector('.access-quizz').innerHTML =`
+        <div class="quizz"></div>
         <button onclick="funcao(${data.data.id})">Acessar Quiz</button>
         <a href=""> Voltar pra home </a>
     `//lucio adiciona a funcao de exibir o quizz aqui no "onclick="funcao${data.data.id}""
