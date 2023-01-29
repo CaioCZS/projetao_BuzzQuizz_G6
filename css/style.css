@@ -24,6 +24,7 @@ header{
 }
 
 /* ================== TELA 1 =================*/
+
 .screen-1{
     height: 100vh;
     width: 80vw;
@@ -153,12 +154,13 @@ div.all-quizzes h1{
 /* ================== TELA 2 =================*/
 
 .quiz-body-2{
+    position: absolute;
     background-color: #fafafa;
     width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 70px;
+    top: 70px;
     flex-wrap: wrap;
 }
 
@@ -166,7 +168,6 @@ div.all-quizzes h1{
     width: 100vw;
     height: 227px;
     position: absolute;
-    top: 70px;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -175,9 +176,8 @@ div.all-quizzes h1{
     height: 227px;
     display: flex;
     justify-content: center;
-    background-image: url("/images/Rectangle 36.jpg");
     background-position: center center;
-    background-size: 100vw, 227px;   
+    background-size: 100vw, 227px;
 }
 
 .quiz-title-2{
@@ -209,6 +209,7 @@ div.all-quizzes h1{
     height: 138px;
     display: flex;
     justify-content: center;
+    text-align: center;
     align-items: center;
     font-style: normal;
     font-weight: 700;
@@ -218,22 +219,7 @@ div.all-quizzes h1{
     margin-top: 28px;
     margin-right: 36px;
     margin-left: 36px;
-}
-
-.blue-question-2{
-    background-color: #434CA0;
-}
-
-.purple-question-2{
-    background-color: #A0438D;
-}
-
-.orange-question-2{
-    background-color: orange;
-}
-
-.black-question-2{
-    background-color: black;
+    word-break: break-word;
 }
 
 .answers-2{
@@ -255,14 +241,6 @@ div.all-quizzes h1{
     height: 175px;
 }
 
-.green-text-2{
-    color:  #009C22;
-}
-
-.red-text-2{
-    color: #FF4B4B;
-}
-
 .text-answer-2{
     color:black;
     font-style: normal;
@@ -273,6 +251,16 @@ div.all-quizzes h1{
     align-items: center;
     margin-top: 9px;
     margin-bottom: 19px;
+    word-break: break-word;
+    width: 329px;
+}
+
+.green-text-2{
+    color:  #009C22;
+}
+
+.red-text-2{
+    color: #FF4B4B;
 }
 
 .quiz-finalization-2{
@@ -281,7 +269,6 @@ div.all-quizzes h1{
     background-color: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
     margin-top: 44px;
-    margin-bottom: 57px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -313,6 +300,7 @@ div.all-quizzes h1{
     width: 727px;
     display: flex;
     justify-content: space-between;
+    word-break: break-all;
 }
 
 .text-finalization-2{
@@ -327,6 +315,7 @@ div.all-quizzes h1{
 }
 
 .restart-quiz-2{
+    margin-top: 57px;
     width: 260px;
     height: 52px;
     border-radius: 15px;
@@ -476,9 +465,6 @@ h6{
     margin-bottom: 14px;
 }
 
-.page-3-3 input{
-}
-
 .input-margin-14px{
     margin-top: 14px;
 }
@@ -582,16 +568,19 @@ h6{
         margin-top: 18px;
         margin-left: 18px;
         margin-right: 18px;
-        text-align: center;
     }
     .answers-2{
         width: auto;
         margin-left: 18px;
         margin-right: 18px;
+        justify-content: space-evenly;
     }
     .answer-2 img{
         width: 163px;
         height: 113px;
+    }
+    .text-answer-2{
+        width: 163px;
     }
     .quiz-finalization-2{
         width: 100vw;
@@ -702,8 +691,8 @@ h6{
         width: 340px;
         margin-left: -20px;
     }
-    .quiz-finalization-2{
-        margin-bottom: 37px;
+    .restart-quiz-2{
+        margin-top: 37px;
     }
     .quiz-finalization-title-2{
         font-size: 19px;
