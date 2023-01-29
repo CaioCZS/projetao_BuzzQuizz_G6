@@ -301,7 +301,7 @@ function quizFinalization(){
         }
     }else{
         const nextQuestionDiv = document.getElementById(`question-${nextQuestion}`);
-        nextQuestionDiv.scrollIntoView({block: "center"});
+        setTimeout(()=>{nextQuestionDiv.scrollIntoView({block: "center"})},2000);
         nextQuestion +=1;
     } 
 }
