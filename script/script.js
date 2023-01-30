@@ -43,7 +43,6 @@ const showYourQuizzes = () =>{
     })
     document.querySelector('.your-quizzes-empty').classList.add("hidden");
     document.querySelector('.your-quizzes').classList.remove("hidden");
-
 }
 
 function getKeys(){
@@ -70,7 +69,7 @@ const showAllQuizzes = (resposta) =>{
         </div>
         `;
         listaAllQuizzes.innerHTML+=template
-        document.querySelector(`.id-${quizz.id}`).style.backgroundImage = `linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 65.62%, rgba(0, 0, 0, 0.8) 100%),url(${quizz.image})`
+        document.querySelector(`.all-quizzes .list-quizzes .id-${quizz.id}`).style.backgroundImage = `linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 65.62%, rgba(0, 0, 0, 0.8) 100%),url(${quizz.image})`
         //console.log(document.querySelector(`.id-${quizz.id}`))
     })
 }
@@ -1026,10 +1025,14 @@ function created_quizz_sucess(data){
 
     getKeys();
     document.querySelector('.access-quizz').innerHTML =`
-        <div class="quizz"></div>
+        <div class="fix-quizz">    
+        <div class="quizz id-${data.data.id}"></div>
+        </div>
         <button onclick="searchQuiz(${data.data.id})">Acessar Quiz</button>
         <a href=""> Voltar pra home </a>
-    `
+    `;
+    document.querySelector(`.access-quizz .fix-quizz .id-${data.data.id}`).style.backgroundImage = `linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 65.62%, rgba(0, 0, 0, 0.8) 100%),url(${data.data.image})`
+    console.log(data)
 }
 
 function created_quizz_failure(data){
